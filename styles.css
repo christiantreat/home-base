@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.night-sky {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: blink 1s infinite alternate;
+}
+
+#star1 {
+  top: 20%;
+  left: 15%;
+}
+
+#star2 {
+  top: 40%;
+  left: 50%;
+}
+
+/* Add more star positions as needed */
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
