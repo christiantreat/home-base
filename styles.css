@@ -8,6 +8,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #000;
+  animation: darken 10s linear forwards;
 }
 
 .star {
@@ -31,11 +32,30 @@ body {
 
 /* Add more star positions as needed */
 
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
 @keyframes blink {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes darken {
+  from {
+    background-color: #000;
+  }
+  to {
+    background-color: #04040b;
   }
 }
