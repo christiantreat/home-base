@@ -34,7 +34,13 @@ body {
 
 /* Add more star positions as needed */
 
+/* Import the custom font */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/* Apply the font to the center-text */
 .center-text {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3rem; /* Adjust font size as needed */
   position: absolute;
   top: 50%;
   left: 50%;
