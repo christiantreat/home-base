@@ -19,5 +19,8 @@ function createStar(container) {
   star.classList.add("star");
   star.style.top = `${getRandomNumber(0, 100)}%`;
   star.style.left = `${getRandomNumber(0, 100)}%`;
+
+  const animationDelay = getRandomNumber(0, 4); // Adjust the range for desired delay
+  star.style.animationDelay = `-${animationDelay}s`; // Negative delay for variation
   container.appendChild(star);
 }
