@@ -17,9 +17,7 @@ body {
   height: 2px;
   background-color: #fff;
   border-radius: 50%;
-  animation: blink 2s infinite alternate;
-}
-
+animation: blink 2s infinite alternate, scroll 20s infinite linear;
 }
 
 #star1 {
@@ -65,5 +63,14 @@ body {
   }
   to {
     background-color: #04040b;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh); /* Adjust the distance if needed */
   }
 }
