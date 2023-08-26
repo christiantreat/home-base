@@ -17,7 +17,7 @@ body {
   height: 2px;
   background-color: #fff;
   border-radius: 50%;
-animation: blink 2s infinite alternate, scroll 20s infinite linear;
+animation: blink 2s infinite alternate;
 }
 
 #star1 {
