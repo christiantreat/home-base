@@ -8,6 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let i = 0; i < numberOfStars; i++) {
     createStar(nightSky);
   }
+
+  // Store the initial scroll position
+  let prevScrollY = window.scrollY;
+
+  // Listen for the scroll event
+  window.addEventListener("scroll", function () {
+    // Calculate the difference in scroll position
+    const deltaY = window.scrollY - prevScrollY;
+
+    // Update stars' positions based on scroll direction
+    const stars = document.querySelectorAll(".star");
+    stars.forEach(function (star) {
+      const currentTop = parseInt(star.style.top, 10);
+      star.style.top = `${currentTop + deltaY}px`;
+    });
+
+    // Update the previous scroll position
+    prevScrollY = window.scrollY;
+  });
 });
 
 function getRandomNumber(min, max) {
